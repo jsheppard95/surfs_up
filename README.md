@@ -1,2 +1,8 @@
 # surfs_up
-Jupyter Notebook files for analysis of weather data contained in an SQLite database.
+Jupyter Notebooks and Flask API for analysis of weather data contained in an SQLite database.
+
+## Overview of the analysis
+
+## Results
+
+## Summary
