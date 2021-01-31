@@ -36,8 +36,30 @@ summarized below:
 Key Differences:
 - Higher average temperature in June than December, as expected.
 - Larger range for December temperature data than that of June.
-  - 27&deg;F difference between the maximum and minimum measurement in December versus 21&deg;F in June.
+  - 27 &deg;F difference between the maximum and minimum measurement in December versus 21 &deg;F in June.
   - Also reflected in the increased standard deviation for December data.
 - Roughly equal interquartile ranges between June and December data.
 
 ## Summary
+We see that on average the recorded temperature was higher in June than December by 3.9 &deg;F. We also find there is a larger spread in the
+December data as shown by its increased standard deviation which indicates there are likley some December days with temperatures reaching that
+of June. This is also confirmed by the roughly equal maximum temperatures for each month. Considering additional weather data, we can compare
+levels of precipitation between June and December using the query:
+```
+results = session.query(Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
+```
+and similarly for December. Doing so shows there are increased levels of precipitation in December, but again with greater variation in the measured
+data. Further, we can list the stations by decreasing number of measurements to compare June and December temperatures at the most active station.
+We determine the most active station using:
+```
+session.query(Measurement.station, func.count(Measurement.station)).\
+    group_by(Measurement.station).order_by(func.count(Measurement.station).desc()).all()
+```
+which shows "USC00519281" is most active with 2,772 measurements. We then determine the minimum, maximum, and average temperature for June at
+this station with the query:
+```
+session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)).\
+    filter(Measurement.station == 'USC00519281').filter(extract('month', Measurement.date) == 6).all()
+```
+Repeating this query for December again shows a higher average temperature in June (73.3 &deg;F versus 69.9 &deg;F) and further reveals this station
+is in general colder than many in this dataset.
