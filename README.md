@@ -19,7 +19,7 @@ analysis we query and summarize key differences in weather data between the mont
 
 ## Results
 The summary statistics for temperature measurements (in &deg;F) for the months of June and December are shown in
-[june_temps.png](Resource/june_temps.png) and [december_temps.png](Resources/december_temps.png), respectively. The key differences are
+[june_temps.png](Resources/june_temps.png) and [december_temps.png](Resources/december_temps.png), respectively. The key differences are
 summarized below:
 
 ## Summary
