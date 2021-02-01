@@ -42,7 +42,7 @@ Key Differences:
 
 ## Summary
 We see that on average the recorded temperature was higher in June than December by 3.9 &deg;F. We also find there is a larger spread in the
-December data as shown by its increased standard deviation, indicating there are likley some December days with temperatures reaching that
+December data as shown by its increased standard deviation, indicating there are likley some December days with temperatures reaching those
 of June. This is also confirmed by the roughly equal maximum temperatures for each month. Considering additional weather data, we can compare
 levels of precipitation between the two months using the query:
 ```
