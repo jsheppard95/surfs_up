@@ -1,5 +1,5 @@
 # surfs_up
-Jupyter Notebooks for analysis of weather data contained in an SQLite database using SQLAlchemy.
+Jupyter Notebooks for the analysis of weather data contained in an SQLite database using SQLAlchemy.
 
 ## Overview of the analysis
 Here we analyze weather data contained in [hawaii.sqlite](hawaii.sqlite) using [`SQLAlchemy`](https://www.sqlalchemy.org/). This dataset includes
