@@ -77,7 +77,7 @@ conda env create -f environment.yml
 3. Additional visualizations are found in `climate_analysis.ipynb`.
 4. Finally, this project contains a `Flask` application that functions as an
 API server providing precipitation, station, and temperature data through API
-requests. To launch this server, navigate to the root of the code repository
+requests. To launch this server, navigate to the root of this repository
 and run the command:
 ```
 flask run
@@ -93,7 +93,7 @@ which will output:
 Open a web browser and navigate to the local host running the server, in this case
 `http://127.0.0.1:5000/`, as shown in [API Home](Images/app_home.png). One can then
 navigate to any of the provided routes to access the associated data, as shown in
-[Precipitation Request](Images/precip_req.png). To access all temperature data,
-add the route `/api/v1.0/tobs` to the index, while temperatures within a specified
-range are accessible as shown in
+[Precipitation Request](Images/precip_req.png). All temperature data is accessible
+at the route extension `/api/v1.0/tobs`, while temperatures within a specified
+range are are found as shown in
 [Temperature Over Range Request](Images/temp_range_req.png).
