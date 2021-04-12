@@ -15,6 +15,7 @@ analysis we query and summarize key differences in Hawaii weather data between t
   - NumPy 1.18.1
   - pandas 1.0.1
   - SQLAlchemy 1.3.13
+  - Flask 1.1.1
   - Jupyter Notebook 6.0.3
 
 ## Results
@@ -63,3 +64,36 @@ session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(M
 ```
 Repeating this query for December again shows a higher average temperature in June (73.3 &deg;F versus 69.9 &deg;F) and further reveals this station
 is likely colder than many in this dataset.
+
+## Usage
+One can replicate this analysis with the following steps. After cloning the
+repository:
+
+1. Create environment from `environment.yml`
+```
+conda env create -f environment.yml
+```
+2. Open Jupyter Notebook file `SurfsUp_Challenge.ipynb` and run all cells.
+3. Additional visualizations are found in `climate_analysis.ipynb`.
+4. Finally, this project contains a `Flask` application that functions as an
+API server providing precipitation, station, and temperature data through API
+requests. To launch this server, navigate to the root of the code repository
+and run the command:
+```
+flask run
+```
+which will output:
+```
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+Open a web browser and navigate to the local host running the server, in this case
+`http://127.0.0.1:5000/`, as shown in [API Home](Images/app_home.png). One can then
+navigate to any of the provided routes to access the associated data, as shown in
+[Precipitation Request](Images/precip_req.png). To access all temperature data,
+add the route `/api/v1.0/tobs` to the index, while temperatures within a specified
+range are accessible as shown in
+[Temperature Over Range Request](Images/temp_range_req.png).
