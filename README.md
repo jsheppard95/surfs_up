@@ -66,18 +66,20 @@ Repeating this query for December again shows a higher average temperature in Ju
 is likely colder than many in this dataset.
 
 ## Usage
-One can replicate this analysis with the following steps. After cloning the
-repository:
-
-1. Create environment from `environment.yml`
+The majority of this analysis is contained in the Jupyter Notebook file
+`SurfsUp_Challenge.ipynb`. Replicating is therfore possible by first cloning
+the repository and installing all dependencies into an isolate conda
+environment using:
 ```
 conda env create -f environment.yml
 ```
-2. Open Jupyter Notebook file `SurfsUp_Challenge.ipynb` and run all cells.
-3. Additional visualizations are found in `climate_analysis.ipynb`.
-4. Finally, this project contains a `Flask` application that functions as an
-API server providing precipitation, station, and temperature data through API
-requests. To launch this server, navigate to the root of this repository
+One can then open `SurfsUp_Challenge.ipynb` and run all cells. In addition,
+exploratory climate analysis with visualizations can be found by running all
+cells contained in `climate_analysis.ipynb`, as shown for
+[Precipitation](Images/precip_vis.png). Finally, this project contains a
+`Flask` application that functions as a local API server providing
+precipitation, station, and temperature data through web requests. To launch
+this server, navigate to the root of this repository
 and run the command:
 ```
 flask run
