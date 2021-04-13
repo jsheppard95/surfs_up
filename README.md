@@ -67,8 +67,8 @@ is likely colder than many in this dataset.
 
 ## Usage
 The majority of this analysis is contained in the Jupyter Notebook file
-`SurfsUp_Challenge.ipynb`. Replicating is therfore possible by first cloning
-the repository and installing all dependencies into an isolate conda
+`SurfsUp_Challenge.ipynb`. Replicating is therefore possible by first cloning
+the repository and installing all dependencies into an isolated conda
 environment using:
 ```
 conda env create -f environment.yml
@@ -96,6 +96,7 @@ Open a web browser and navigate to the local host running the server, in this ca
 `http://127.0.0.1:5000/`, as shown in [API Home](Images/app_home.png). One can then
 navigate to any of the provided routes to access the associated data, as shown in
 [Precipitation Request](Images/precip_req.png). All temperature data is accessible
-at the route extension `/api/v1.0/tobs`, while temperatures within a specified
-range are are found as shown in
-[Temperature Over Range Request](Images/temp_range_req.png).
+at the route extension `/api/v1.0/tobs`, while the minimum, average, and maximum
+temperatures over a specified range can be found as shown in
+[Temperature Over Range Request](Images/temp_range_req.png), where the output is of
+the form `[Min_Temp, Avg_Temp, Max_Temp]`.
